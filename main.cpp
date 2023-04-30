@@ -1,24 +1,24 @@
+#include <array>
+#include <cstdio>
+#include <fstream>
 #include <iostream>
+#include <memory>
+#include <sstream>
+#include <stdexcept>
 #include <string>
 #include <vector>
-#include <fstream>
-#include <sstream>
-#include <cstdio>
-#include <memory>
-#include <stdexcept>
-#include <array>
 
-#define RED     "\x1b[31m"
-#define GREEN   "\x1b[32m"
-#define YELLOW  "\x1b[33m"
-#define BLUE    "\x1b[34m"
+#define RED "\x1b[31m"
+#define GREEN "\x1b[32m"
+#define YELLOW "\x1b[33m"
+#define BLUE "\x1b[34m"
 #define MAGENTA "\x1b[35m"
-#define CYAN    "\x1b[36m"
-#define WHITE   "\x1b[37m"
+#define CYAN "\x1b[36m"
+#define WHITE "\x1b[37m"
 
 using namespace std;
 
-std::string exec(const char* cmd) {
+std::string exec(const char *cmd) {
     std::array<char, 128> buffer;
     std::string result;
     std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(cmd, "r"), pclose);
@@ -41,7 +41,7 @@ void printFile(string fileName, int beam) {
                 cout << CYAN << lineNum << WHITE << "   | " << line << endl;
                 lineNum++;
                 continue;
-            } else if (lineNum >= 10){
+            } else if (lineNum >= 10) {
                 cout << CYAN << lineNum << WHITE << "  | " << line << endl;
                 lineNum++;
                 continue;
@@ -61,7 +61,7 @@ void printFile(string fileName, int beam) {
                 cout << CYAN << lineNum << WHITE << "    " << line << endl;
                 lineNum++;
                 continue;
-            } else if (lineNum >= 10){
+            } else if (lineNum >= 10) {
                 cout << CYAN << lineNum << WHITE << "   " << line << endl;
                 lineNum++;
                 continue;
@@ -74,20 +74,22 @@ void printFile(string fileName, int beam) {
                 lineNum++;
                 continue;
             }
-        }    
-    }    
+        }
+    }
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     int b = 0;
     if (argc == 1) {
         cout << "No file name given!" << endl;
         return 1;
     }
-    cout << "====================[" << GREEN << argv[1] << WHITE << "]====================" << endl;
+    cout << "====================[" << GREEN << argv[1] << WHITE
+         << "]====================" << endl;
     printFile(argv[1], b);
-    cout << "====================["<< RED <<"END OF FILE" << WHITE <<"]====================" << endl;
-    //print file size in bytes
+    cout << "====================[" << RED << "END OF FILE" << WHITE
+         << "]====================" << endl;
+    // print file size in bytes
     ifstream file(argv[1], ios::binary | ios::ate);
     streamsize size = file.tellg();
     file.close();
