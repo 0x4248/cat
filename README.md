@@ -10,6 +10,6 @@ Remake of cat with a few different features.
 ./cat [FILE]
 ```
 
-## License
+## Licence
 
-This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the GPL-3.0 License - see the [LICENCE](LICENCE) file for details
