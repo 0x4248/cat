@@ -89,7 +89,7 @@ int main(int argc, char *argv[]) {
     printFile(argv[1], b);
     cout << "====================[" << RED << "END OF FILE" << WHITE
          << "]====================" << endl;
-    // print file size in bytes
+    /* print file size in bytes */
     ifstream file(argv[1], ios::binary | ios::ate);
     streamsize size = file.tellg();
     file.close();
