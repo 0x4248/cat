@@ -1,3 +1,11 @@
+/**
+ * Cat
+ * Remake of cat with a few different features.
+ * Github: https://www.github.com/lewisevans2007/cat
+ * Licence: GNU General public licence V3.0
+ * By: Lewis Evans
+ */
+
 #include <array>
 #include <cstdio>
 #include <fstream>
