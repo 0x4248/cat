@@ -4,7 +4,7 @@ Remake of cat with a few different features.
 ```bash
 ./cat test
 ```
-![Screenshot](https://github.com/lewisevans2007/cat/blob/master/doc/demo.png)
+![Screenshot](https://github.com/0x4248/cat/blob/master/doc/demo.png)
 ## Usage
 ```bash
 ./cat [FILE]

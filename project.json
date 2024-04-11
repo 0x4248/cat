@@ -3,9 +3,9 @@
     "description": "Remake of cat with a few different features.",
     "version": "",
     "main_file": "main.cpp",
-    "author": "Lewis Evans",
+    "author": "0x4248",
     "license": "GNU General Public License v3.0",
-    "url": "https://github.com/lewisevans2007/cat",
+    "url": "https://github.com/0x4248/cat",
     "email": "none",
     "languages": [
         "c++"

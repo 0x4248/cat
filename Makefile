@@ -1,8 +1,8 @@
 # Cat
 # Remake of cat with a few different features.
-# Github: https://www.github.com/lewisevans2007/cat
+# Github: https://www.github.com/0x4248/cat
 # Licence: GNU General public licence V3.0
-# By: Lewis Evans
+# By: 0x4248
 
 SRC = src
 MAIN = main.cpp
